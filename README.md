@@ -4,3 +4,11 @@
 </div>
 An AI which helps you to control your mouse using your eyes.
 
+### Requirements
+<ul> 
+  <li>Python 3
+  <li>OpenCV
+  <li>Mediapipe
+  <li>PyAutoGUI
+</ul>
+
