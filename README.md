@@ -25,6 +25,7 @@ resized_cropped = cv2.resize(cropped, (width, height))
 ```
 <br>
 Finding out landamrks of the eyes.
+
 ``` python
 rgb_frame = cv2.cvtColor(resized_cropped, cv2.COLOR_BGR2RGB)
 output = face_mesh.process(rgb_frame)
