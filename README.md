@@ -33,6 +33,7 @@ landmark_points = output.multi_face_landmarks
 ```
 <br>
 Moving the mouse the same space the eyes move.
+
 ``` python
 screen_x = screen_w / frame_w * x
 screen_y = screen_h / frame_h * y
@@ -45,6 +46,7 @@ pyautogui.moveTo(screen_x, screen_y)
 ```
 <br>
 Left click: if the y coordinates of upper and lower eyelid are close enough.
+
 ``` python
 for landmark in left:
   x = int(landmark.x * frame_w)
