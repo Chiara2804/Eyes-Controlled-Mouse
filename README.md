@@ -10,7 +10,6 @@ An AI which helps you to control your mouse using your eyes.
   <li>OpenCV
   <li>Mediapipe
   <li>PyAutoGUI
-  <li>Time
 </ul>
 
 ## Code
