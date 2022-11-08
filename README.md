@@ -13,11 +13,6 @@ An AI which helps you to control your mouse using your eyes.
   <li>Time
 </ul>
 
-## Demo
-<video width="100%" controls>
-  <source src="README_imgs/short.mp4" type="video/mp4">
-</video>
-
 ## Code
 Zooming and cropping the frame.
 ``` python
