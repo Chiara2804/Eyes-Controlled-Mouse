@@ -1,8 +1,19 @@
+
 import cv2
 import mediapipe as mp
 import pyautogui
+from flask import Flask, render_template, url_for
 
-def show_webcam():
+
+# create and configure the app
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/run_app')
+def run_app():
     scale = 10
 
     camera = cv2.VideoCapture(0)
@@ -38,7 +49,7 @@ def show_webcam():
                     screen_x = screen_w / frame_w * x
                     screen_y = screen_h / frame_h * y
                     try:
-                        pyautogui.moveTo(screen_x, screen_y) 
+                        pyautogui.moveTo(screen_x, screen_y)
                     except pyautogui.FailSafeException:
                         print('Running code before exiting.')
                         break
@@ -67,15 +78,12 @@ def show_webcam():
 
         cv2.imshow('Eyes Controlled Mouse', resized_cropped)
         key = cv2.waitKey(10)
-        # if Esc key is press then break out of the loop 
-        if key == 27: 
+        # if Esc key is press then break out of the loop
+        if key == 27:
             break
-    
+
     camera.release()
     cv2.destroyAllWindows()
 
-def main():
-    show_webcam()
-
 if __name__ == '__main__':
-    main()
+    app.run()
