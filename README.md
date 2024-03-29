@@ -16,10 +16,10 @@ An AI which helps you to control your mouse using your eyes.
 Zooming and cropping the frame.
 ``` python
 scale = 10
-centerX,centerY=int(height/2),int(width/2)
-radiusX,radiusY= int(scale*height/60),int(scale*width/60)
-minX,maxX=centerX-radiusX,centerX+radiusX
-minY,maxY=centerY-radiusY,centerY+radiusY
+centerX, centerY = int(height/2), int(width/2)
+radiusX, radiusY = int(scale*height/60), int(scale*width/60)
+minX, maxX = centerX - radiusX, centerX + radiusX
+minY, maxY = centerY - radiusY, centerY + radiusY
 cropped = frame[minX:maxX, minY:maxY]
 resized_cropped = cv2.resize(cropped, (width, height))
 ```
